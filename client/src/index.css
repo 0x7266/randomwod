@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=DynaPuff:wght@500&display=swap");
+
+
 body {
   background-color: #ccc;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,7 +17,7 @@ body {
   display: flex;
   gap: 2%;
   justify-content: center;
-  padding: 1%;
+  padding: 20px;
   text-align: center;
 }
 
@@ -23,7 +26,8 @@ nav .logo {
 }
 
 nav .title {
-  font-family: monospace;
+  color: #937eef;
+  font-family: "DynaPuff", cursive;
   font-size: 4rem;
   line-break: auto;
 }
@@ -33,8 +37,7 @@ nav .title {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 50px;
-  padding: 2%;
+  padding: 30px;
 }
 
 .wodSection .btn {
@@ -60,27 +63,23 @@ nav .title {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   width: 50vw;
 }
 
 .name {
+  font-family: "Bungee Shade";
   font-size: 6rem;
   font-weight: bold;
 }
 
 .info {
   font-size: 2rem;
+  margin-bottom: 30px;
   text-align: center;
-}
-
-.type {
-}
-
-.timecap {
 }
 
 .movements {
   font-size: 4rem;
   text-align: center;
+  width: 80vw;
 }
