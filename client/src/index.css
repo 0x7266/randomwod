@@ -1,39 +1,86 @@
 body {
-  margin: 0;
+  background-color: #ccc;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ddd;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-nav {
-  background-color: rgb(99, 79, 121);
+.navbar {
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(118, 89, 141), rgb(66, 47, 77));
+  display: flex;
+  gap: 2%;
+  justify-content: center;
+  padding: 1%;
+  text-align: center;
 }
 
 nav .logo {
-  width: 3rem;
+  width: 100px;
 }
 
 nav .title {
   font-family: monospace;
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 4rem;
+  line-break: auto;
 }
 
-main {
-  width: 100%;
+.wodSection {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  padding: 2%;
 }
 
-main .btn {
+.wodSection .btn {
+  background-color: #c0a5df;
+  border: none;
+  border-radius: 5px;
   font-family: monospace;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  padding: 1% 3%;
+  padding: 15px 30px;
+}
+
+.wodSection .btn:hover {
+  background-color: #a68ec2;
+}
+
+.wodSection .btn:active {
+  position: relative;
+  top: 2px;
+}
+
+.wod {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50vw;
+}
+
+.name {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.info {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.type {
+}
+
+.timecap {
+}
+
+.movements {
+  font-size: 4rem;
+  text-align: center;
 }
