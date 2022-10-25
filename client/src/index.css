@@ -74,7 +74,7 @@ nav .title {
   width: 600px;
 }
 
-.wod-header {
+.card-header {
   background-color: #aaa;
   border-radius: 10px 10px 0 0;
   font-size: 6rem;
@@ -93,7 +93,7 @@ nav .title {
 }
 
 .info {
-  background-color: rgb(192, 96, 96);
+  background-color: rgb(216, 135, 166);
   border-radius: 5px;
   font-weight: bold;
   padding: 5px 10px;

@@ -16,6 +16,7 @@ export default function Wod() {
   }
 
   //useEffect(() => {getWod()}, []);
+  
 
   return (
     <section className="wodSection">
@@ -23,7 +24,7 @@ export default function Wod() {
         RANDOM GIRL
       </button>
       <div className="card">
-        <div className="wod-header">{wod.name}</div>
+        <div className="card-header">{wod.name}</div>
         <div className="card-body">
           <div className="info">
             <div className="type">{wod.type}</div>
