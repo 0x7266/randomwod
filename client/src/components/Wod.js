@@ -22,13 +22,15 @@ export default function Wod() {
       <button className="btn" onClick={getWod}>
         RANDOM GIRL
       </button>
-      <div className="wod">
-        <div className="name">{wod.name}</div>
-        <div className="info">
-          <div className="type">{wod.type}</div>
-          <div className="timecap">{wod.timecap}</div>
+      <div className="card">
+        <div className="wod-header">{wod.name}</div>
+        <div className="card-body">
+          <div className="info">
+            <div className="type">{wod.type}</div>
+            <div className="timecap">{wod.timecap}</div>
+          </div>
+          <div className="movements">{wod.movements}</div>
         </div>
-        <div className="movements">{wod.movements}</div>
       </div>
     </section>
   );

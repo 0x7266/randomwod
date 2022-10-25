@@ -1,14 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=DynaPuff:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap");
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: #ccc;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #323232;
 }
 
 .navbar {
@@ -26,7 +30,7 @@ nav .logo {
 }
 
 nav .title {
-  color: #937eef;
+  color: #9f75d6;
   font-family: "DynaPuff", cursive;
   font-size: 4rem;
   line-break: auto;
@@ -38,13 +42,13 @@ nav .title {
   flex-direction: column;
   justify-content: center;
   padding: 30px;
+  gap: 50px;
 }
 
 .wodSection .btn {
   background-color: #c0a5df;
   border: none;
   border-radius: 5px;
-  font-family: monospace;
   font-size: 2rem;
   font-weight: bold;
   padding: 15px 30px;
@@ -59,27 +63,48 @@ nav .title {
   top: 2px;
 }
 
-.wod {
+.card {
   align-items: center;
+  background-color: #bbb;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  gap: 20px;
+  height: 700px;
+  width: 600px;
 }
 
-.name {
-  font-family: "Bungee Shade";
+.wod-header {
+  background-color: #aaa;
+  border-radius: 10px 10px 0 0;
   font-size: 6rem;
   font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.card-body {
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .info {
-  font-size: 2rem;
-  margin-bottom: 30px;
+  background-color: rgb(192, 96, 96);
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px 10px;
+  position: absolute;
+  right: 10px;
   text-align: center;
+  top: -10px;
 }
 
 .movements {
-  font-size: 4rem;
-  text-align: center;
-  width: 80vw;
+  position: relative;
+  font-size: 3rem;
+  top: 70px;
 }
