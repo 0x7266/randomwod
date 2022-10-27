@@ -1,38 +1,22 @@
 import { useState } from "react";
+import getWod from "../util/getWod.js";
+import Card from "./Card.js";
 
 export default function Wod() {
   const [card, setCard] = useState([]);
 
-  async function getWod(event) {
-    event.preventDefault();
-    const response = await fetch("http://localhost:5000/");
-    const data = await response.json();
-    //console.log(data);
-    let key = Math.floor(Math.random() * Object.keys(data).length);
-    //console.log(key);
-    let girl = Object.keys(data)[key];
-    let wod = data[girl];
-    //console.log(data[girl]);
-    setCard(<div className="card">
-    <div className="card-header">{wod.name}</div>
-    <div className="card-body">
-      <div className="info">
-        <div className="type">{wod.type}</div>
-        <div className="timecap">{wod.timecap}</div>
-      </div>
-      <div className="movements">{wod.movements}</div>
-    </div>
-  </div>);
-  }
-
-  //useEffect(() => {getWod()}, []);
+  async function getCard() {
+    const wod = await getWod();
+    console.log(wod);
+    setCard(<Card text={wod.name} type={wod.type} timecap={wod.timecap} movements={wod.movements}/>);
+  };
 
   return (
     <section className="wodSection">
-      <button className="btn" onClick={getWod}>
+      <button className="btn" onClick={getCard}>
         RANDOM GIRL
       </button>
-      <>{card}</>
+      <div>{card}</div>
     </section>
   );
-}
+};

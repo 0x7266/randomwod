@@ -65,6 +65,7 @@ nav .title {
 
 .card {
   align-items: center;
+  animation: popUp .4s ease-in;
   background-color: #bbb;
   border-radius: 10px;
   display: flex;
@@ -107,4 +108,18 @@ nav .title {
   position: relative;
   font-size: 3rem;
   top: 70px;
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0%;
+    transform: scale(.2);
+  }
+  50% {
+    opacity: 50%;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 100%;
+  }
 }
