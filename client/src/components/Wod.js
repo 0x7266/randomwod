@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Wod() {
-  const [wod, setWod] = useState([]);
+  const [card, setCard] = useState([]);
 
   async function getWod(event) {
     event.preventDefault();
@@ -9,30 +9,30 @@ export default function Wod() {
     const data = await response.json();
     //console.log(data);
     let key = Math.floor(Math.random() * Object.keys(data).length);
-    console.log(key);
+    //console.log(key);
     let girl = Object.keys(data)[key];
+    let wod = data[girl];
     //console.log(data[girl]);
-    setWod(data[girl]);
+    setCard(<div className="card">
+    <div className="card-header">{wod.name}</div>
+    <div className="card-body">
+      <div className="info">
+        <div className="type">{wod.type}</div>
+        <div className="timecap">{wod.timecap}</div>
+      </div>
+      <div className="movements">{wod.movements}</div>
+    </div>
+  </div>);
   }
 
   //useEffect(() => {getWod()}, []);
-  
 
   return (
     <section className="wodSection">
       <button className="btn" onClick={getWod}>
         RANDOM GIRL
       </button>
-      <div className="card">
-        <div className="card-header">{wod.name}</div>
-        <div className="card-body">
-          <div className="info">
-            <div className="type">{wod.type}</div>
-            <div className="timecap">{wod.timecap}</div>
-          </div>
-          <div className="movements">{wod.movements}</div>
-        </div>
-      </div>
+      <>{card}</>
     </section>
   );
 }
